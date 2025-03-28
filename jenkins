@@ -2,17 +2,17 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "sharath198/springboot-app-extapi"
+        DOCKER_IMAGE = "benjaminj26/springboot-app-extapi"
         K8S_DEPLOYMENT = "springboot-app"
         K8S_NAMESPACE = "default"
-        DOCKER_USERNAME = "sharath198"
-        DOCKER_PASSWORD = "Sharath@198"  // ⚠️ (Security Risk! Use Jenkins Credentials Instead)
+        DOCKER_USERNAME = "benjaminj26"
+        DOCKER_PASSWORD = "Pass@word123#"  // ⚠️ (Security Risk! Use Jenkins Credentials Instead)
     }
 
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/9182029380/springboot--ext-api-resttemplete.git'
+                git branch: 'main', url: 'https://github.com/benjaminj26/springboot--ext-api-resttemplete.git'
             }
         }
 
